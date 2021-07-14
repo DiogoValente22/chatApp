@@ -218,6 +218,7 @@ form .name-details .field:last-child{
     font-size: 12px;
     color: #468669;
 }
+/*  */
 .users-list a .status-dot.offline{
-    color: #ccc;
+    color: #cccccc;
 }
