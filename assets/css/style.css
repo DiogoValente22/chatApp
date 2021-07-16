@@ -140,6 +140,9 @@ form .name-details .field:last-child{
     height: 50px;
     width: 50px;
 }
+:is(.users, .chat-area) header .details{
+    margin-left: 15px;
+}
 :is(.users, .users-list) .details{
     color: #000;
     margin-left: 15px;
