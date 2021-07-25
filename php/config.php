@@ -1,8 +1,7 @@
 <?php
-
-    $conn = mysqli_connect("localhost", "root", "", "testekkk");
+    
+    $conn = new PDO("mysql:dbname=bd_chatapp; host=localhost", "root", "");
     if(!$conn){
-        echo "Database not connected" . mysqli_connect_error();
+        echo "Database not connected";
     }
-
 ?>
