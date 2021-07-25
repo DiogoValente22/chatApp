@@ -18,7 +18,7 @@
 
                 <div class="content">
 
-                    <img src="/assets/img/chris.jpg" alt="profile icon">
+                    <img src="assets/img/chris.jpg" alt="profile icon">
 
                     <div class="details">
 
@@ -45,7 +45,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -58,7 +58,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -71,7 +71,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -84,7 +84,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -97,7 +97,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -110,7 +110,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
@@ -123,7 +123,7 @@
 
                 <a href="#">
                     <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
+                        <img src="assets/img/chris.jpg" alt="">
                         <div class="details">
 
                             <span>Chris Rock</span>
