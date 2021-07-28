@@ -14,25 +14,26 @@
         <section class="form login">
             <header>Realtime Chat App</header>
             <form action="#">
-                <div class="error-txt">test error message</div>
+                <div class="error-txt"></div>
                 <div class="field input">
                     <label>Email Adress</label>
-                    <input type="text" placeholder="Enter your email">
+                    <input type="text" name="email" placeholder="Enter your email">
                 </div>
                 <div class="field input">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter your password">
+                    <input type="password" name="password" placeholder="Enter your password">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
+            <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
         </section>
     </div>
 
 
     <script src="assets/js/password-show-hide.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
