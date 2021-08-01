@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Chat App</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-</head>
+<?php
+
+    session_start();
+
+    $unique_id_session = $_SESSION['unique_id'];
+
+    if(!isset($unique_id_session)){
+        header("location: login.php");
+    }
+
+?>
+<?php include_once "header.php"; ?>
 <body>
     
     <div class="wrapper">
@@ -16,14 +18,22 @@
             
             <header>
 
+            <?php
+                include_once "php/config.php";
+                $stmt = $conn->prepare("SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+                $stmt->execute();
+                $sql = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $show = $sql[0];
+            ?>
+
                 <div class="content">
 
-                    <img src="assets/img/chris.jpg" alt="profile icon">
+                    <img src="php/images/<?= $show['img'];?>" alt="profile icon">
 
                     <div class="details">
 
-                        <span>Chris Rock</span>
-                        <p>Active now</p>
+                        <span><?= $show['fname'] . " " . $show['lname'];?></span>
+                        <p><?= $show['status'];?></p>
 
                     </div>
 
@@ -43,122 +53,7 @@
 
             <div class="users-list">
 
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test messagee</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-
-                <a href="#">
-                    <div class="content">
-                        <img src="/assets/img/chris.jpg" alt="">
-                        <div class="details">
-
-                            <span>Chris Rock</span>
-                            <p>this is test message</p>
-    
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
+                
 
             </div>
 
