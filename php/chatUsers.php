@@ -2,12 +2,12 @@
 
     session_start();
     include_once "config.php";
+    $outgoing_id = $_SESSION['unique_id'];
 
     //count rows query
     $stmt_count = $conn->prepare("SELECT count(*) FROM users");
     $stmt_count->execute();
     $result_count = $stmt_count->fetchAll(PDO::FETCH_ASSOC);
-
     $rows_number = $result_count[0]['count(*)'];
 
     //query to select all data from users
