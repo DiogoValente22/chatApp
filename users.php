@@ -39,7 +39,7 @@
 
                 </div>
 
-                <a href="#" class="logout">Logout</a>
+                <a href="php/logout.php?logout_id=<?=$show['unique_id']?>" class="logout">Logout</a>
 
             </header>
 
