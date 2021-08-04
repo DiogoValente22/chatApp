@@ -36,7 +36,12 @@
         */
 
         //<p>'. $you . $msg .'</p>
+
         foreach ($sql as $row){
+
+            //check user is online or offline
+            ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
+
             $output .= '
             <a href="chat.php?user_id='.$row['unique_id'].'">
             <div class="content">
@@ -46,7 +51,7 @@
             <p></p>
             </div>
             </div>
-            <div class="status-dot"><i class="fas fa-circle"></i>
+            <div class="status-dot '.$offline.'"><i class="fas fa-circle"></i>
             </div>
             </a>
         ';
