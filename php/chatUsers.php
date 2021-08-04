@@ -11,7 +11,7 @@
     $rows_number = $result_count[0]['count(*)'];
 
     //query to select all data from users
-    $stmt = $conn->prepare("SELECT * FROM users");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE NOT unique_id = {$outgoing_id}");
     $stmt->execute();
     
     $output = "";
