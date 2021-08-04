@@ -14,7 +14,7 @@ PHP version 7.4 or higher.
  💡 I used XAMPP server to running the App.
  
  ## 💻 Data Base Structure
- #Users DB structure
+ # Users DB structure
  <img src="assets/img/usersDB.PNG">
- #messages DB structure
+ # messages DB structure
  <img src="assets/img/messagesDB.PNG">
