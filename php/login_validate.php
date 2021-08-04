@@ -16,8 +16,15 @@
 
             // check if email and password matched
             if($sql){
-                $_SESSION['unique_id'] = $sql[0]['unique_id'];
-                echo "success";
+                $status = "Active now";
+                $stmt2 = $conn->prepare("UPDATE users SET status = :STATUS WHERE unique_id = {$sql[0]['unique_id']}");
+                $stmt2->bindParam(":STATUS", $status);
+                $stmt2->Execute();
+                if($stmt2){
+                    $_SESSION['unique_id'] = $sql[0]['unique_id'];
+                    echo "success";
+                }
+                
             }else{
                 echo "Email or Password is incorrect!";
             }
