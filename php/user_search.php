@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$outgoing_id = $_SESSION['unique_id'];
 include_once "config.php";
 $searchTerm = $_POST['searchTerm'];
 $output = "";
