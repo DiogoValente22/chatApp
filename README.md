@@ -8,7 +8,7 @@ Study to improve my knowledge of PHP and javascript. This is a real time chat ap
 ## Requirements
 PHP version 7.4 or higher.
 
-## 🎈 What languages were used?
+## 🎈 What technologies were used?
  **PHP** - **MySQl** - **HTML** - **CSS** - **AJAX** - **JAVASCRIPT**. 
  
  💡 I used XAMPP server to running the App.
